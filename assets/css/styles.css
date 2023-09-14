@@ -802,7 +802,7 @@ img {
 }
 @media only screen and (min-width: 375px) and (max-width: 767px) {
   .scrollup {
-    font-size: 30px;
+    font-size: 40px;
   }
   .show-scroll {
     bottom: 30px;
