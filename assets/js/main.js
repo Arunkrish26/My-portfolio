@@ -4,11 +4,11 @@ const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId);
 
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("show");
-    });
-  }
+  // if (toggle && nav) {
+  // }
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("show");
+  });
 };
 
 showMenu("nav_toggle", "nav_menu");
@@ -58,9 +58,6 @@ const scrollActive = () => {
 };
 window.addEventListener("scroll", scrollActive);
 
-const scriptURL =
-  "https://script.google.com/macros/s/AKfycbzbfRaImapvWiQdnP7C5_NQubscTDMvIgWWD1wx58U2bs5ZpuVi6js5t0t1lUE59P-u/exec";
-const form = document.forms["submit-to-google-sheet"];
 const successMsg = document.getElementById("success-msg");
 
 // -------------------------------------------------------------
@@ -69,6 +66,7 @@ const successMsg = document.getElementById("success-msg");
 const username = document.getElementById("name");
 const email = document.getElementById("email");
 const textArea = document.getElementById("textArea");
+const form = document.getElementById("form");
 
 const setError = (element, message) => {
   const inputControl = element.parentElement;
@@ -130,27 +128,35 @@ const validateInputs = () => {
   return success;
 };
 
-// ----------------------------------------------------------------------------------------
-
 function resetForm() {
   successMsg.style.display = "Block";
   document.getElementById("name").style.borderColor = "black";
   document.getElementById("email").style.borderColor = "black";
   document.getElementById("textArea").style.borderColor = "black";
-  setTimeout(function () {
-    successMsg.style.display = "none";
-  }, 5000);
   form.reset();
 }
+
+// ----------------------------------------------------------------------------------------
 
 form.addEventListener("submit", (e) => {
   if (!validateInputs()) {
     e.preventDefault();
   } else {
-    e.preventDefault();
-    fetch(scriptURL, { method: "POST", body: new FormData(form) })
-      .then((response) => resetForm())
-      .catch((error) => console.error("Error!", error.message));
-    console.log("hii");
+    form.submit();
+    setTimeout(() => {
+      form.reset();
+    }, 1000);
   }
 });
+
+// function submitForm() {
+//   if (!validateInputs()) {
+//     e.preventDefault();
+//   } else {
+//     e.preventDefault();
+
+//     form.submit();
+
+//     form.reset();
+//   }
+// }

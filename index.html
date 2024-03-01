@@ -435,7 +435,7 @@
                 <span class="skill_name">Html5</span>
               </div>
 
-              <div><span class="skill_percentage">95%</span></div>
+              <div><span class="skill_percentage">90%</span></div>
 
               <div class="skill_bar skill_html"></div>
             </div>
@@ -460,7 +460,7 @@
                   <span class="skill_name">Tailwind</span>
                 </div>
   
-                <div><span class="skill_percentage">75%</span></div>
+                <div><span class="skill_percentage">60%</span></div>
   
                 <div class="skill_bar skill_tailwind"></div>
               </div>
@@ -537,18 +537,35 @@
 
         <!-- project-3 -->
 
+            <!-- <div class="project-container">
+              <div class="work_img">
+                <img src="./assets/img/project-7.png"loading="lazy" alt="project-3" />
+               
+              </div>
+              <div class="project-info">
+                <h4> finance app <h4>
+                <h5 class="responsive">Responsive</h5 >
+
+                <div class="source-btn">
+                  <a href="https://arunkrish26.github.io/EaZy-Finance/" target="_blank"><i class='bx bx-link-external'></i>Demo</a >
+                  <a href="https://github.com/Arunkrish26/EaZy-Finance" target="_blank"><i class='bx bxl-github'></i>Code</a>
+              </div>
+    
+              </div>
+            </div> -->
+
             <div class="project-container">
               <div class="work_img">
                 <img src="./assets/img/project-3.png"loading="lazy" alt="project-3" />
                
               </div>
               <div class="project-info">
-                <h4> Finance App</h4>
+                <h4>E-commerce site</h4>
                 <h5 class="responsive">Responsive</h5 >
 
                 <div class="source-btn">
-                  <a href="https://arunkrish26.github.io/EaZy-Finance/" target="_blank"><i class='bx bx-link-external'></i>Demo</a >
-                  <a href="https://github.com/Arunkrish26/EaZy-Finance" target="_blank"><i class='bx bxl-github'></i>Code</a>
+                  <a href="https://arunkrish26.github.io/Trends/" target="_blank"><i class='bx bx-link-external'></i>Demo</a >
+                  <a href="https://github.com/Arunkrish26/Trends" target="_blank"><i class='bx bxl-github'></i>Code</a>
               </div>
     
               </div>
@@ -563,12 +580,12 @@
                  
                 </div>
                 <div class="project-info">
-                  <h4>E-commerce Website</h4>
+                  <h4>To-do List</h4>
                   <h5 class="responsive">Responsive</h5 >
 
                   <div class="source-btn">
-                    <a href="https://arunkrish26.github.io/Footcap/" target="_blank"><i class='bx bx-link-external'></i>Demo</a >
-                    <a href="https://github.com/Arunkrish26/Footcap" target="_blank"><i class='bx bxl-github'></i>Code</a>
+                    <a href="https://arunkrish26.github.io/To-do-list-App/" target="_blank"><i class='bx bx-link-external'></i>Demo</a >
+                    <a href="https://github.com/Arunkrish26/To-do-list-app" target="_blank"><i class='bx bxl-github'></i>Code</a>
                 </div>
       
                 </div>
@@ -622,7 +639,10 @@
         <h2 class="section-title" data-aos="fade-down">Contact</h2>
 
         <div class="contact_container bd_grid">
-          <form name="submit-to-google-sheet"  id="form" class="contact_form">
+          <form action="https://api.web3forms.com/submit" method="POST" id="form" class="contact_form">
+
+          
+            <input type="hidden" name="access_key" value="b1d92e74-37d3-4c54-ac12-98843fb16445">
 
            <div class="input-group">
             <input
@@ -682,6 +702,7 @@
           <div id="success-msg">Message sent Successfully &check;</div>
 
           </form>
+
         </div>
       </section>
 
@@ -744,7 +765,7 @@
         </div>
 
         <p >
-          &#169; 2024 copyright all right reserved
+          &#169; <span id="year"></span> copyright all right reserved
         </p>
       </footer>
     </main>
@@ -772,6 +793,12 @@
         backSpeed:80,
         loop:true
       });
+
+
+      var date=new Date();
+      var year=date.getFullYear();
+
+      document.getElementById("year").innerHTML=year;
     </script>
 
     
