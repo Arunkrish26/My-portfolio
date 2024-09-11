@@ -540,7 +540,7 @@ img {
   );
   top: 0;
   left: -100px;
-  animation: shine 3s infinite linear; /* Animation */
+  animation: shine 2s infinite linear; /* Animation */
 }
 
 @keyframes shine {
